@@ -1,8 +1,11 @@
+var count = 0;
+
 document.addEventListener("click", function(event){
 
     let labels = document.querySelectorAll(".offcanvas header label span"),
         serv = document.querySelectorAll(".offcanvas-wrapper .slider"),
-        check = document.querySelectorAll(".offcanvas-wrapper > div");
+        check = document.querySelectorAll(".offcanvas-wrapper > div"),
+        mainHam = document.querySelector(".left-sidebar header label span");
     for(let i = 0; i < labels.length; i++){
         if(event.target.matches(".offcanvas header label span")){
             if(labels[i] === event.target){
@@ -22,6 +25,22 @@ document.addEventListener("click", function(event){
                 // serv[i].style.display = "none";
             }
         }
+    }
+
+    if(event.target.matches("#toggle-ham")){
+        count++;
+        if (count % 2 === 1){
+            serv[0].style.opacity = "1";
+            serv[0].style.transform = "translate3d(0px, 0, 0)";
+        }else{
+            serv[0].style.transform = "translate3d(0px, 100px, 0)";
+            serv[1].style.transform = "translate3d(0px, 100px, 0)";
+            serv[2].style.transform = "translate3d(0px, 100px, 0)";
+            serv[0].style.opacity = "0";
+            serv[1].style.opacity = "0";
+            serv[2].style.opacity = "0";
+        }
+        // alert(count);
     }
 })
 
