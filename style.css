@@ -26,7 +26,7 @@ input[type="checkbox"]{
     z-index: 10;
 }
 .left-sidebar  header{
-    /* background-color: transparent; */
+    background-color: black;
     /* background-color: pink; */
     /* border: 1px solid black; */
     position: relative;
@@ -203,6 +203,8 @@ input#toggle-ham:checked ~ .left-sidebar .offcanvas label span.three{
 .sect-one{
     width: 100%;
     padding-top: 20px;
+   background-color: yellow;
+
 }
 .sect-two{
    position: relative;
@@ -261,16 +263,15 @@ input#toggle-ham:checked ~ .left-sidebar .offcanvas label span.three{
     backface-visibility: hidden;
 }
 .front-page{
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
 }
 .back-page{
     background-color: purple;
     transform: rotateX(-180deg);
     /* border-top-left-radius: 20px; */
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-
+    /* border-top-right-radius: 20px;
+    border-top-left-radius: 20px; */
 }
 .leaf-2 .front-page{
     background-color: grey;
@@ -303,16 +304,15 @@ input#toggle-page-2:checked ~ .flip-card .leaf-2{
 /* In Container */
 
 .overlay{
-    position: absolute;
     background-color: transparent;
-
     transition: background-color 5s;
 }
 input#toggle-ham:checked ~ .container .overlay{
+    position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(255, 255, 255, .4);
+    background-color: blue;
 }
 @media only screen and (min-width: 600px){
     .hamburger{
@@ -373,7 +373,7 @@ input#toggle-ham:checked ~ .container .overlay{
        height: 100vh;
        float: left;
        width: 50%;
-       background-color: #fff;
+       background-color: red;
     }
 
     .flip-card{
@@ -394,15 +394,15 @@ input#toggle-ham:checked ~ .container .overlay{
         /* transform: rotateY(-10deg); */
     }
     .front-page{
-        border-top-right-radius: 20px;
+        /* border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 0;
+        border-bottom-left-radius: 0; */
     }
     .back-page{
-        transform: rotateY(180deg);
-        border-top-left-radius: 20px;
+        transform: rotateY(180deg) translateZ(8deg);
+        /* border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        border-top-right-radius: 0;
+        border-top-right-radius: 0; */
     }
     input#toggle-page:checked ~ .flip-card .leaf-1,
     input#toggle-page-2:checked ~ .flip-card .leaf-2{
