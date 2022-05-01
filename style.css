@@ -1,3 +1,8 @@
+:root{
+    --bgMainDark: 
+    --bgMainYellow: #D1A233;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -25,13 +30,17 @@ input[type="checkbox"]{
     /* width: 100vw; */
     z-index: 10;
 }
-.left-sidebar  header{
-    background-color: black;
+.left-sidebar >  header{
+    background-color: #222831;
     /* background-color: pink; */
     /* border: 1px solid black; */
     position: relative;
     overflow: hidden;
     height: 10vh;
+    /* border-radius: 150px; */
+background: #222831;
+box-shadow: inset 5px 5px 10px #0e1014,
+            inset -5px -5px 10px #36404e;
 }
 .left-sidebar > header{
     width: 100vw;
@@ -48,26 +57,37 @@ input[type="checkbox"]{
     width: 50px;
     border-radius: 50%;
     background-color: red;
-    margin-left: 50px;
+    margin-left: 20px;
     font-size: 0; /* Removes white-space from inline-block div */
-}
+
+    border-radius: 150px;
+background: #222831;
+box-shadow: inset 5px 5px 10px #0e1014,
+            inset -5px -5px 10px #36404e;}
 
 .hamburger span{
     display: inline-block;
     height: 3px;
     width: 20px;
-    background-color: white;
+    background-color: #FFD369;
     position: relative;
     left: 50%; /* Moves child element 50% to the left */
-    margin-left: -10px; /* This measurerment is half the width of child element. The negative margin moves the element to the left and helps set the div exactly at the center */
+    /*margin-left: -10px;  This measurerment is half the width of child element. The negative margin moves the element to the left and helps set the div exactly at the center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 80px;
+
 }
 
 .hamburger span:before, .hamburger span:after{
     height: 3px;
     width: 20px;
     position: absolute;
-    background-color: white;
+    background-color: #FFD369;
     content: "";
+    border-radius: 80px;
 }
 .hamburger span:before{
     top: 6px;
@@ -120,6 +140,8 @@ input#toggle-ham:checked ~  .container{
     background-color: #fff;
     padding-left: 40px;
     padding-right: 40px;
+    position: relative;
+    overflow: hidden;
 }
 .offcanvas header label{
     display: inline-block;
@@ -201,10 +223,27 @@ input#toggle-ham:checked ~ .left-sidebar .offcanvas label span.three{
     background-color: grey;
 }
 .sect-one{
+    height: 100vh;
     width: 100%;
     padding-top: 20px;
-   background-color: yellow;
-
+   background-color: #393E46;
+   background-image: url("./images/DSC_3063.JPG");
+   background-position: center ;
+   background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(57, 62, 70, 0.97live );
+    /* background: linear-gradient(145deg, rgba(61, 66, 75, 0.1), rgba(51, 56, 63, 0.1)), url("./images/DSC_3063.JPG"); */
+}
+.pic{
+    width: 100%;
+    height: 100%;
+    /* border-radius: 150px; */
+    background: #393E46;
+    border-radius: 50px;
+    display: none;
+/* background: linear-gradient(145deg, #3d424b, #33383f);
+box-shadow:  20px 20px 60px #32363d,
+             -20px -20px 60px #40464f; */
 }
 .sect-two{
    position: relative;
@@ -212,6 +251,10 @@ input#toggle-ham:checked ~ .left-sidebar .offcanvas label span.three{
    /* float: left; */
    width: 100%;
    background-color: #fff;
+}
+.sect-one h3{
+    color: #EEEEEE;
+    text-align: center;
 }
 
 
