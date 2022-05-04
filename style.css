@@ -42,7 +42,7 @@ input[type="checkbox"] {
   height: 10vh;
   /* border-radius: 150px; */
   background: #222831;
-  box-shadow: inset 5px 5px 10px #0e1014, inset -5px -5px 10px #36404e;
+  /* box-shadow: inset 5px 5px 10px #0e1014, inset -5px -5px 10px #36404e; */
 }
 .left-sidebar > header {
   width: 100vw;
@@ -65,7 +65,7 @@ input[type="checkbox"] {
 
   border-radius: 150px;
   background: #222831;
-  box-shadow: inset 5px 5px 10px #0e1014, inset -5px -5px 10px #36404e;
+  /* box-shadow: inset 5px 5px 10px #0e1014, inset -5px -5px 10px #36404e; */
 }
 
 .hamburger span {
@@ -128,10 +128,6 @@ input#toggle-ham:checked ~ .left-sidebar .offcanvas {
   left: 0;
   width: 100vw;
   /* transform: translate3d(0px, 0px, 0px); */
-}
-input#toggle-ham:checked ~ .container {
-  /* left: 320px; */
-  /* transform: translate3d(320px, 0px, 0px); */
 }
 
 /* Inside Offcanvas */
@@ -199,12 +195,7 @@ input#toggle-ham:checked ~ .left-sidebar .offcanvas label span.three {
   z-index: 1;
   /* opacity: 0; */
 }
-.services {
-  /* background-color: red; */
-}
-.contact {
-  /* background-color: yellow; */
-}
+
 .slider {
   color: var(--offWhite);
 }
@@ -264,7 +255,7 @@ box-shadow:  20px 20px 60px #32363d,
   /* height: 100vh; */
   /* float: left; */
   width: 100%;
-  background-color: var(---secondaryDark);
+  background-color: var(--primaryDark);
   padding: 20px;
   top: 100vh;
   transition: height 2s, top 2s;
@@ -275,9 +266,7 @@ box-shadow:  20px 20px 60px #32363d,
   left: 150px;
   z-index: 100;
 }
-input#viewProjects:checked ~ .sect .sect-one{
-    /* width: 0%; */
-}
+
 input#viewProjects:checked ~ .sect .sect-two{
     /* width: 100%; */
     position: absolute;
@@ -342,16 +331,10 @@ input#viewProjects:checked ~ .sect .sect-two{
   width: 100%;
   backface-visibility: hidden;
 }
-.front-page {
-  /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
-}
+
 .back-page {
   background-color: purple;
   transform: rotateX(-180deg);
-  /* border-top-left-radius: 20px; */
-  /* border-top-right-radius: 20px;
-    border-top-left-radius: 20px; */
 }
 .leaf-2 .front-page {
   background-color: grey;
@@ -390,9 +373,12 @@ input#toggle-page-2:checked ~ .flip-card .leaf-2 {
 .sect-two h3{
     font-size: 30px;
     margin-top: 30px;
+    margin-bottom: 30px;
     color: var(--offWhite)
 }
-
+.project-title h3{
+  font-size: 22px;
+}
 .app-projects-wrapper{
     /* display: flex; */
     /* padding: 10px; */
@@ -400,11 +386,12 @@ input#toggle-page-2:checked ~ .flip-card .leaf-2 {
 }
 .projects{
     width: 100%;
-    height: 300px;
+    height: 320px;
     border-radius: 10px;
-    background-color: var(--primaryDark);
+    background-color: var(---secondaryDark);
     padding: 15px;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .link-to-live{
@@ -456,6 +443,27 @@ input#toggle-page-2:checked ~ .flip-card .leaf-2 {
     object-position: top;
 
 }
+.project-2{
+  position: relative;
+}
+.projects.project-2:hover .project-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(57, 62, 70, 0.9);
+  height: 100%;
+  padding: 35px;
+  border-radius: 10px;
+}
+.p-wrapper,
+.p-wrapper img{
+  width: 100%;
+  height: 100%;
+}
+.p-wrapper img{
+  object-fit: cover;
+  border-radius: 10px;
+}
 .brief{
   padding-top: 10px;
 }
@@ -483,6 +491,7 @@ input#toggle-ham:checked ~ .container .overlay {
     left: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
+    top: 35px;
   }
   .logo {
     display: none;
@@ -542,7 +551,7 @@ input#toggle-ham:checked ~ .container .overlay {
     height: 100vh;
     float: left;
     width: 100%;
-    background-color: var(---secondaryDark);
+    background-color: var(--primaryDark);
     transition: left 2s;
     top: 0;
     left: 100vw;
@@ -553,9 +562,7 @@ input#toggle-ham:checked ~ .container .overlay {
     left: 150px;
     z-index: 100;
   }
-  input#viewProjects:checked ~ .sect .sect-one{
-      /* width: 0%; */
-  }
+ 
   input#viewProjects:checked ~ .sect .sect-two{
       width: 100%;
       top: 0;
@@ -583,16 +590,9 @@ input#toggle-ham:checked ~ .container .overlay {
     transform: rotateX(0);
     /* transform: rotateY(-10deg); */
   }
-  .front-page {
-    /* border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-bottom-left-radius: 0; */
-  }
+  
   .back-page {
     transform: rotateY(180deg) translateZ(8deg);
-    /* border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        border-top-right-radius: 0; */
   }
   input#toggle-page:checked ~ .flip-card .leaf-1,
   input#toggle-page-2:checked ~ .flip-card .leaf-2 {
