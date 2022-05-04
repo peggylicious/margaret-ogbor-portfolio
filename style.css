@@ -292,13 +292,27 @@ box-shadow:  20px 20px 60px #32363d,
   z-index: 100;
 }
 
-input#viewProjects:checked~.sect .sect-two {
+input#viewProjects:checked ~ .container .sect .sect-two {
   /* width: 100%; */
   position: absolute;
   /* height: 100vh; */
   top: 10vh;
   z-index: 1;
 }
+.left-sidebar > header{
+  transition: border 2s;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+input#viewProjects:checked ~ .left-sidebar > header {
+  border-bottom: 10px solid var(--primaryYellow);
+  transition: border 2s;
+}
+
+/* input#viewProjects:checked ~ .left-sidebar > header {
+  border-bottom: 10px solid var(--primaryYellow);
+  border-right: none;
+} */
 
 .introduction {
   color: var(--offWhite);
@@ -574,6 +588,19 @@ input#toggle-ham:checked~.container .overlay {
 .social-links a:last-child{
   margin-bottom: 40px;
 }
+.org{
+  color: var(--offWhite);
+}
+.org-header{
+  display: flex;
+  justify-content: space-between;
+}
+.about-role ul{
+  list-style-type: none;
+}
+.about-role ul li{
+  padding: 6px 12px;
+}
 
 @media only screen and (min-width: 600px) {
   .hamburger {
@@ -656,6 +683,19 @@ input#toggle-ham:checked~.container .overlay {
     transition: left 2s;
     top: 0;
     left: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+  .sect-two > label{
+    display: block;
+  }
+  .sect-two .sect-2-divider-1{
+    width: 35%;
+    padding: 0 40px 0 20px;
+  }
+  .sect-two .sect-2-divider-2{
+    width: 65%;
   }
 
   #viewProjects {
@@ -665,12 +705,26 @@ input#toggle-ham:checked~.container .overlay {
     z-index: 100;
   }
 
-  input#viewProjects:checked~.sect .sect-two {
-    width: 100%;
+  /* input#viewProjects:checked ~ .container .sect{
+    width: calc(100% - 95px);
+  } */
+  input#viewProjects:checked ~ .container .sect .sect-two {
+    width: calc(100% - 95px);
+
     top: 0;
     left: 0;
   }
-
+  .left-sidebar > header{
+    transition: border 2s;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+  }
+  input#viewProjects:checked ~ .left-sidebar > header {
+    border-right: 10px solid var(--primaryYellow);
+    border-bottom: 1px solid transparent;
+    transition: border 2s;
+  }
+  
   .app-projects-wrapper {
     display: flex;
     /* padding: 10px; */
