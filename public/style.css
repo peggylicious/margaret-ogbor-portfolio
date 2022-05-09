@@ -21,10 +21,18 @@ label {
   /* background-color: blue;
     border: 1px solid red; */
 }
-
-body {
-  overflow: hidden;
+body{
+  /* overflow: hidden; */
 }
+.bd-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+/* .bd-wrapper::-webkit-scrollbar{
+  display: none;
+  background: transparent; 
+} */
 
 input[type="checkbox"] {
   position: absolute;
@@ -127,7 +135,7 @@ input[type="checkbox"] {
   position: relative;
   left: 0px;
   height: 100vh;
-  width: calc(100% - 80px);
+  /* width: calc(100% - 80px); */
   background-color: yellow;
   padding-top: 60px;
   transition: left 0.3s;
@@ -240,8 +248,10 @@ input#toggle-ham:checked~.left-sidebar .offcanvas label span.three {
 /* Sect */
 .sect {
   height: 100vh;
-  overflow-y: scroll;
-  background-color: grey;
+  overflow-y: hidden;
+  background-color: var(--primaryDark);
+  overflow-x: hidden;
+  position: relative;
 }
 
 .sect-one {
@@ -296,8 +306,11 @@ input#viewProjects:checked ~ .container .sect .sect-two {
   /* width: 100%; */
   position: absolute;
   /* height: 100vh; */
-  top: 10vh;
+  top: 10px;
   z-index: 1;
+}
+input#viewProjects:checked ~ .container .sect {
+  overflow-y: scroll;
 }
 .left-sidebar > header{
   transition: border 2s;
@@ -553,6 +566,7 @@ input#toggle-ham:checked~.container .overlay {
   height: 100%;
   width: 100%;
   background-color: rgba(34, 40, 49, 0.9);
+  z-index: 1;
 }
 
 .back-home {
@@ -596,17 +610,40 @@ input#toggle-ham:checked~.container .overlay {
 }
 .org{
   color: var(--offWhite);
+  margin-bottom: 25px;
 }
 .org-header{
   display: flex;
   justify-content: space-between;
 }
+.org-name{
+  margin-bottom: 12px;
+}
 .about-role ul{
   list-style-type: none;
 }
 .about-role ul li{
-  padding: 6px 12px;
+  display: flex;
+  padding: 6px 12px 6px 0;
 }
+.about-role ul li:before{
+  content: "";
+  position: relative;
+  top: 5px;
+  width: 0; 
+  height: 0;
+  display: inline-block;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+  border-left: 7px solid var(--offWhite);
+  margin-right: 20px;
+}
+/* @media only screen and (max-width: 980px) {
+  .projects{
+    width: 100%;
+  }
+} */
+
 
 @media only screen and (min-width: 600px) {
   .hamburger {
@@ -623,6 +660,7 @@ input#toggle-ham:checked~.container .overlay {
   .container {
     padding: 0;
     left: 80px;
+    width: calc(100% - 80px);
   }
 
   .offcanvas {
@@ -664,7 +702,9 @@ input#toggle-ham:checked~.container .overlay {
     /* overflow: hidden; */
     /* width: 100%; */
     background-color: grey;
-    width: calc(100% - 80px);
+    width: 100%;
+    overflow: initial;
+    position: static;
   }
 
   .sect-one {
@@ -682,7 +722,7 @@ input#toggle-ham:checked~.container .overlay {
     background-color: var(--primaryDark);
     transition: left 2s;
     top: 0;
-    left: 100vw;
+    left: 100%;
     display: flex;
     flex-wrap: wrap;
     overflow-y: scroll;
@@ -710,7 +750,7 @@ input#toggle-ham:checked~.container .overlay {
     width: calc(100% - 95px);
   } */
   input#viewProjects:checked ~ .container .sect .sect-two {
-    width: calc(100% - 95px);
+    /* width: calc(100% - 95px); */
 
     top: 0;
     left: 0;
@@ -820,6 +860,16 @@ input#toggle-ham:checked~.container .overlay {
 
   .social-links {
     display: flex;
+
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .projects{
+    width: 100%;
+  }
+  .projects:nth-of-type(odd) {
+    margin-right: 0;
 
   }
 }
