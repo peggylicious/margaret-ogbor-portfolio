@@ -45,6 +45,7 @@ input[type="checkbox"] {
   /* background-color: brown; */
   /* width: 100vw; */
   z-index: 10;
+  height: 60px;
 }
 
 .left-sidebar>header {
@@ -53,7 +54,7 @@ input[type="checkbox"] {
   /* border: 1px solid black; */
   position: relative;
   overflow: hidden;
-  height: 10vh;
+  height: 100%;
   /* border-radius: 150px; */
   background: #222831;
   /* box-shadow: inset 5px 5px 10px #0e1014, inset -5px -5px 10px #36404e; */
@@ -133,11 +134,12 @@ input[type="checkbox"] {
 
 .container {
   position: relative;
+  top: 60px;
   left: 0px;
-  height: 100vh;
+  height: calc(100% - 60px);
   /* width: calc(100% - 80px); */
   background-color: yellow;
-  padding-top: 60px;
+  /* padding-top: 60px; */
   transition: left 0.3s;
   width: 100%;
   /* transform: translate3d(0, 0, 0); */
@@ -247,7 +249,7 @@ input#toggle-ham:checked~.left-sidebar .offcanvas label span.three {
 
 /* Sect */
 .sect {
-  height: 100vh;
+  height: 100%;
   overflow-y: hidden;
   background-color: var(--primaryDark);
   overflow-x: hidden;
@@ -306,7 +308,7 @@ input#viewProjects:checked ~ .container .sect .sect-two {
   /* width: 100%; */
   position: absolute;
   /* height: 100vh; */
-  top: 10px;
+  top: 0;
   z-index: 1;
 }
 input#viewProjects:checked ~ .container .sect {
@@ -526,6 +528,9 @@ input#toggle-page-2:checked~.flip-card .leaf-2 {
   z-index: -10;
   position: absolute;
   visibility: hidden;
+  position: absolute;
+    top: 0;
+    left: 0;
 }
 .projects.project-2:hover .project-overlay {
   position: absolute;
@@ -658,7 +663,9 @@ input#toggle-ham:checked~.container .overlay {
   }
 
   .container {
+    height: 100%;
     padding: 0;
+    top: 0;
     left: 80px;
     width: calc(100% - 80px);
   }
