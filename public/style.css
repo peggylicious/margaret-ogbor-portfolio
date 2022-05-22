@@ -333,6 +333,16 @@ input#viewProjects:checked ~ .left-sidebar > header {
   color: var(--offWhite);
   text-align: center;
 }
+.view-projects{
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: var(--primaryDark);
+  margin-top: 20px;
+  font-size: 14px;
+}
+.view-projects:hover{
+  cursor: pointer;
+}
 
 .introduction h2 {
   text-align: center;
@@ -454,10 +464,17 @@ input#toggle-page-2:checked~.flip-card .leaf-2 {
   width: 100%;
   height: 320px;
   border-radius: 10px;
-  background-color: var(---secondaryDark);
-  padding: 15px;
+  /* background-color: var(---secondaryDark); */
+  background-color: transparent;
+  /* padding: 15px; */
   position: relative;
   margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
 }
 
 .link-to-live {
