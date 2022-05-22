@@ -214,7 +214,7 @@ input#toggle-ham:checked~.left-sidebar .offcanvas label span.three {
   position: absolute;
   height: 200px;
   width: 100%;
-  padding: 20px 40px;
+  /* padding: 20px 40px; */
 }
 
 .about {
@@ -233,6 +233,7 @@ input#toggle-ham:checked~.left-sidebar .offcanvas label span.three {
   opacity: 0;
   position: absolute;
   transform: translate3d(0, 100px, 0);
+  padding: 20px 40px;
 }
 
 .about .slider p {
