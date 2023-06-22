@@ -181,6 +181,7 @@ input#toggle-ham:checked~.left-sidebar .offcanvas {
   display: inline-block;
   color: var(--offWhite);
   /*height: 0;*/
+  height: 40px;
   /* Removes unwanted space from element so that pointer can focus only on needed area */
 }
 
