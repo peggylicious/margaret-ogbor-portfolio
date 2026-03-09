@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "margaret-ogbor"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
